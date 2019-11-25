@@ -21,12 +21,10 @@ Array.prototype.newMap = function(fn) {
   let lastIndex = 0;
   Object.keys(this).forEach(key => {
     key = Number(key);
-
     while (key - lastIndex > 1) {
       newArray.push(undefined);
       lastIndex++;
     }
-
     newArray.push(fn(this[key], key, this));
     lastIndex = key;
   });

@@ -24,5 +24,5 @@ var uniquePaths = function(m, n) {
   }
 };
 
-console.log(uniquePaths(3, 3));
-debugger;
+console.log(uniquePaths(3, 4));
+// debugger;
