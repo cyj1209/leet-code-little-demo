@@ -10,8 +10,9 @@ var search = function(nums, target) {
 
   while (left <= right) {
     mid = Math.floor((left + right) / 2);
-    if (nums[mid] === target) return mid;
-
+    if (nums[mid] === target) {
+      return mid;
+    }
     if (nums[left] <= nums[mid]) {
       if (target >= nums[left] && target < nums[mid]) {
         right = mid - 1;
@@ -34,4 +35,4 @@ let a, target;
 
 a = [8, 1, 2, 3, 4, 5, 6, 7];
 target = 2;
-console.log(search(a,target));
+console.log(search(a, target));
